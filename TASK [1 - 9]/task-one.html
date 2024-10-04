@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      // Code One
+      document.getElementById("el").style.color = "red";    // "The code will not work due to the order of execution."
+    </script>
+    <script>
+      // Code Two
+      window.onload = function () {                        // Using the "onload" attribute ensures that the code executes after the page has loaded.                     
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three                                       // Respecting the order of execution, the code makes it execute on the element
+    document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html>
